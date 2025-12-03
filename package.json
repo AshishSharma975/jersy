@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "vite build",
-    "dev": "vite"
+    "build": "node ./node_modules/vite/bin/vite.js build"
   },
   "keywords": [],
   "author": "",
