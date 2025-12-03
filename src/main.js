@@ -45,18 +45,12 @@ model(scene);
 
 const rgbeLoader = new RGBELoader();
 
-rgbeLoader.load(
-  "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/christmas_photo_studio_01_1k.hdr",
-  (texture) => {
+rgbeLoader.load("/christmas_photo_studio_01_1k.hdr", (texture) => {
     texture.mapping = THREE.EquirectangularReflectionMapping;
     scene.environment = texture;
     scene.background = texture;
-  },
-  undefined,
-  (error) => {
-    console.error("HDR load error:", error);
-  }
-);
+});
+
 
 
 const renderer = createRenderer();
